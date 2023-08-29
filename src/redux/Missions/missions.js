@@ -9,10 +9,10 @@ export const fetchMissions = createAsyncThunk(
     const result = [];
     data.forEach((mission) => {
       result.push({
-        mission_name: mission.mission_name,
+        name: mission.mission_name,
         description: mission.description,
-        mission_id: mission.mission_id,
-        active_member: false,
+        id: mission.mission_id,
+        member: false,
       });
     });
     return result;
