@@ -6,7 +6,7 @@ import MissionCard from './MissionCard';
 
 const Missions = () => {
   const dispatch = useDispatch();
-  const { missions, pending, error } = useSelector((store) => store.missions.missions);
+  const { missions, pending, error } = useSelector((store) => store.missions);
   useEffect(() => {
     dispatch(fetchMissions());
   }, [dispatch]);

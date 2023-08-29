@@ -1,7 +1,12 @@
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { handleMission } from '../redux/Missions/missions';
 
 const MissionCard = ({ props }) => {
-  const { name, description, member } = props;
+  const {
+    name, description, member, id,
+  } = props;
+  const dispatch = useDispatch();
 
   const getButton = (member, btn) => {
     let button;
@@ -14,9 +19,9 @@ const MissionCard = ({ props }) => {
     }
     if (btn === 'mission') {
       button = member ? (
-        <button className="leave-mission-btn" type="button">Leave Mission</button>
+        <button className="leave-mission-btn" type="button" onClick={() => dispatch(handleMission(id))}>Leave Mission</button>
       ) : (
-        <button className="join-mission-btn" type="button">Join Mission</button>
+        <button className="join-mission-btn" type="button" onClick={() => dispatch(handleMission(id))}>Join Mission</button>
       );
     }
     return button;
@@ -40,5 +45,6 @@ MissionCard.propTypes = {
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   member: PropTypes.bool.isRequired,
+  id: PropTypes.string.isRequired,
 };
 export default MissionCard;

@@ -28,34 +28,45 @@ const initialState = {
 const missionsSlice = createSlice({
   name: 'missions',
   initialState,
-  reducers: {},
+  reducers: {
+    handleMission: (state, { payload }) => {
+      const missions = [];
+      state.missions.forEach((mission) => {
+        if (mission.id === payload) {
+          missions.push({
+            ...mission,
+            member: !mission.member,
+          });
+        } else {
+          missions.push({ ...mission });
+        }
+      });
+      return {
+        ...state,
+        missions,
+      };
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(fetchMissions.fulfilled, (state, { payload }) => ({
       ...state,
-      missions: {
-        missions: payload,
-        pending: false,
-        error: false,
-      },
+      missions: payload,
+      pending: false,
+      error: false,
     }));
     builder.addCase(fetchMissions.pending, (state) => ({
       ...state,
-      missions: {
-        ...state.missions,
-        pending: true,
-        error: false,
-      },
+      pending: true,
+      error: false,
     }));
 
     builder.addCase(fetchMissions.rejected, (state) => ({
       ...state,
-      missions: {
-        ...state.missions,
-        pending: false,
-        error: true,
-      },
+      pending: false,
+      error: true,
     }));
   },
 });
 
 export default missionsSlice.reducer;
+export const { handleMission } = missionsSlice.actions;
