@@ -12,7 +12,7 @@ export const fetchMissions = createAsyncThunk(
         name: mission.mission_name,
         description: mission.description,
         id: mission.mission_id,
-        member: false,
+        reserved: false,
       });
     });
     return result;
@@ -35,7 +35,7 @@ const missionsSlice = createSlice({
         if (mission.id === payload) {
           missions.push({
             ...mission,
-            member: !mission.member,
+            reserved: !mission.reserved,
           });
         } else {
           missions.push({ ...mission });
