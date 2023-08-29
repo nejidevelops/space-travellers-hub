@@ -6,7 +6,16 @@ export const fetchMissions = createAsyncThunk(
   async () => {
     const req = axios.get('https://api.spacexdata.com/v3/missions');
     const { data } = await req;
-    return data;
+    const result = [];
+    data.forEach((mission) => {
+      result.push({
+        mission_name: mission.mission_name,
+        description: mission.description,
+        mission_id: mission.mission_id,
+        active_member: false,
+      });
+    });
+    return result;
   },
 );
 
