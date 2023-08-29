@@ -29,6 +29,23 @@ const missionsSlice = createSlice({
         error: false,
       },
     }));
+    builder.addCase(fetchMissions.pending, (state) => ({
+      ...state,
+      missions: {
+        ...state.missions,
+        pending: true,
+        error: false,
+      },
+    }));
+
+    builder.addCase(fetchMissions.rejected, (state) => ({
+      ...state,
+      missions: {
+        ...state.missions,
+        pending: false,
+        error: true,
+      },
+    }));
   },
 });
 
