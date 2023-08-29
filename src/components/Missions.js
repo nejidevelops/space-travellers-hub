@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchMissions } from '../redux/Missions/missions';
+import '../styles/Missions.css';
 
 const Missions = () => {
   const dispatch = useDispatch();
@@ -23,10 +24,10 @@ const Missions = () => {
           </tr>
           {missions.map((mission) => (
             <tr key={mission.mission_id}>
-              <td>{mission.mission_name}</td>
-              <td>{mission.description}</td>
-              <td><button type="button">Not a member</button></td>
-              <td><button type="button">Join as member</button></td>
+              <td className="mission-name">{mission.mission_name}</td>
+              <td className="mission-description">{mission.description}</td>
+              <td className="table-btns"><button className="not-member-btn" type="button">Not a member</button></td>
+              <td className="table-btns"><button type="button" className="join-member-btn">Join as member</button></td>
             </tr>
           ))}
         </tbody>
