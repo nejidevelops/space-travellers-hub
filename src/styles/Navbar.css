@@ -22,10 +22,9 @@
 
 li a {
   text-decoration: none;
-  color:  rgb(57, 159, 255);;
+  color: rgb(57, 159, 255);
 }
 
 .active-link {
   text-decoration: underline;
 }
-

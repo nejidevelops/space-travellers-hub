@@ -8,15 +8,18 @@ tr:nth-child(even) {
   background-color: rgb(241, 241, 241);
 }
 
-.mission-name, th {
+.mission-name,
+th {
   font-weight: 600;
 }
 
 .mission-description {
   font-size: 0.8rem;
 }
-td, th {
-  text-align: left; 
+
+td,
+th {
+  text-align: left;
   border: solid 1px rgb(223, 223, 223);
   vertical-align: top;
   padding: 0.5rem;
