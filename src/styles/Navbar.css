@@ -19,3 +19,12 @@
   font-size: 32px;
   font-weight: 600;
 }
+
+li a {
+  text-decoration: none;
+  color: rgb(57, 159, 255);
+}
+
+.active-link {
+  text-decoration: underline;
+}
