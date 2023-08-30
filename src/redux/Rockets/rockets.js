@@ -15,10 +15,10 @@ export const fetchRockets = createAsyncThunk(
     const result = [];
     data.forEach((rocket) => {
       result.push({
-        name: rocket.rocket_name,
-        description: rocket.description,
         id: rocket.rocket_id,
-        reserved: false,
+        name: rocket.rocket_name,
+        type: rocket.rocket_type,
+        image: rocket.flickr_images[0],
       });
     });
     return result;
