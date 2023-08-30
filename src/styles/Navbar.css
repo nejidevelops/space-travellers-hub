@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
+  font-family: arial, sans-serif;
 }
 
 .brand {
@@ -18,6 +19,20 @@
 .brand-name {
   font-size: 32px;
   font-weight: 600;
+}
+
+.nav-list {
+  display: flex;
+  gap: 1rem;
+}
+
+.my-profile-link {
+  border-left: solid 2px;
+  padding-left: 1rem;
+}
+
+ul {
+  list-style: none;
 }
 
 li a {
