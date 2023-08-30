@@ -11,16 +11,13 @@ export const fetchRockets = createAsyncThunk(
   'rocket/fetchRockets',
   async () => {
     const req = axios.get('https://api.spacexdata.com/v3/rockets');
-    const data = await req;
-    const result = [];
-    data.forEach((rocket) => {
-      result.push({
-        id: rocket.rocket_id,
-        name: rocket.rocket_name,
-        type: rocket.rocket_type,
-        image: rocket.flickr_images[0],
-      });
-    });
+    const { data } = await req;
+    const result = data.map((rocket) => ({
+      id: rocket.rocket_id,
+      name: rocket.rocket_name,
+      description: rocket.description,
+      image: rocket.flickr_images[0],
+    }));
     return result;
   },
 );
