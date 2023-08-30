@@ -31,24 +31,22 @@ th {
   text-align: center;
 }
 
-.not-member-btn {
+.not-member-badge {
   padding: 0.2rem 0.4rem;
   background-color: rgb(105, 105, 105);
   color: white;
   font-weight: 600;
   border-radius: 0.5rem;
   border: transparent;
-  outline: none;
 }
 
-.active-member-btn {
+.active-member-badge {
   padding: 0.2rem 0.4rem;
   background-color: rgb(57, 159, 255);
   color: white;
   font-weight: 600;
   border-radius: 0.5rem;
   border: transparent;
-  outline: none;
 }
 
 .join-mission-btn {

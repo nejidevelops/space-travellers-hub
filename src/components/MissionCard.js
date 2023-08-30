@@ -12,9 +12,9 @@ const MissionCard = ({ props }) => {
     let button;
     if (btn === 'member') {
       button = reserved ? (
-        <button className="active-member-btn" type="button">active member</button>
+        <span className="active-member-badge">active member</span>
       ) : (
-        <button className="not-member-btn" type="button">Not a member</button>
+        <span className="not-member-badge">Not a member</span>
       );
     }
     if (btn === 'mission') {
