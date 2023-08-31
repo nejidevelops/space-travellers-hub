@@ -31,7 +31,7 @@ const MissionCard = ({ props }) => {
     <>
       <td className="mission-name">{name}</td>
       <td className="mission-description">{description}</td>
-      <td className="table-btns">{getButton(reserved, 'member')}</td>
+      <td className="table-badges">{getButton(reserved, 'member')}</td>
       <td className="table-btns">{getButton(reserved, 'mission')}</td>
     </>
   );

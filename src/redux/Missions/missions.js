@@ -1,11 +1,10 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import axios from 'axios';
 
 export const fetchMissions = createAsyncThunk(
   'missions/fetchMissions',
   async () => {
-    const req = axios.get('https://api.spacexdata.com/v3/missions');
-    const { data } = await req;
+    const response = await fetch('https://api.spacexdata.com/v3/missions');
+    const data = await response.json();
     const result = [];
     data.forEach((mission) => {
       result.push({
@@ -48,21 +47,12 @@ const missionsSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
-    builder.addCase(fetchMissions.fulfilled, (state, { payload }) => {
-      if (state.missions.length < 1) {
-        return {
-          ...state,
-          missions: payload,
-          pending: false,
-          error: false,
-        };
-      }
-      return {
-        ...state,
-        pending: false,
-        error: false,
-      };
-    });
+    builder.addCase(fetchMissions.fulfilled, (state, { payload }) => ({
+      ...state,
+      missions: payload,
+      pending: false,
+      error: false,
+    }));
     builder.addCase(fetchMissions.pending, (state) => ({
       ...state,
       pending: true,
