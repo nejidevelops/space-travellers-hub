@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { reserveRocket, cancelReservation } from '../redux/Rockets/rockets';
@@ -44,6 +43,8 @@ const RocketCard = ({ props }) => {
 };
 
 RocketCard.propTypes = {
+  props: PropTypes.shape({
+  }).isRequired,
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
