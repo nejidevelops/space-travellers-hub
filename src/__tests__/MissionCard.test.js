@@ -24,14 +24,7 @@ describe('MissionCard', () => {
 
     const myMissions = render(
       <Provider store={store}>
-        <MissionCard props={
-          {
-            name: 'Test Mission',
-            description: 'Test Description',
-            reserved: false,
-            id: 'test-id',
-          }
-        } />
+        <MissionCard props={store.getState().missions.missions[0]} />
       </Provider>,
     );
     expect(myMissions).toMatchSnapshot();
