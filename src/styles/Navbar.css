@@ -1,0 +1,46 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  font-family: arial, sans-serif;
+  border-bottom: solid 2px rgb(211, 211, 211);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand-logo {
+  width: 40px;
+}
+
+.brand-name {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.nav-list {
+  display: flex;
+  gap: 1rem;
+}
+
+.my-profile-link {
+  border-left: solid 2px;
+  padding-left: 1rem;
+}
+
+ul {
+  list-style: none;
+}
+
+li a {
+  text-decoration: none;
+  color: rgb(57, 159, 255);
+}
+
+.active-link {
+  text-decoration: underline;
+}
