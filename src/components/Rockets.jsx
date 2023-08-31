@@ -8,7 +8,9 @@ const Rockets = () => {
   const dispatch = useDispatch();
   const { rockets, pending, error } = useSelector((store) => store.rockets);
   useEffect(() => {
-    dispatch(fetchRockets());
+    if (rockets.length < 1) {
+      dispatch(fetchRockets());
+    }
   }, [dispatch]);
 
   let content;
