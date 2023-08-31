@@ -6,7 +6,8 @@
   margin: 1rem;
 }
 
-.my-missions {
+.my-missions,
+.my-rockets {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -14,16 +15,19 @@
   width: 40%;
 }
 
-.missions-headline {
+.missions-headline,
+.rockets-headline {
   font-weight: 600;
   font-size: 24px;
 }
 
-.missions-list {
+.missions-list,
+.rockets-list {
   width: 100%;
 }
 
-.missions-list li {
+.missions-list li,
+.rockets-list li {
   border: solid 1px rgb(211, 211, 211);
   padding: 0.5rem 0.5rem 1rem 0.5rem;
 }
