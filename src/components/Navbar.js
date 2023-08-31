@@ -15,6 +15,8 @@ const Navbar = () => {
       <ul className="nav-list">
         <li>
           <NavLink to="/missions" className={(nav) => handleActive(nav)}>Missions</NavLink>
+        </li>
+        <li>
           <NavLink to="/rockets" className={(nav) => handleActive(nav)}>Rockets</NavLink>
         </li>
         <li className="my-profile-link">
