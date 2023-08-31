@@ -57,6 +57,37 @@ Object {
                 </button>
               </td>
             </tr>
+            <tr>
+              <td
+                class="mission-name"
+              >
+                Test Mission 2
+              </td>
+              <td
+                class="mission-description"
+              >
+                Test Description 2
+              </td>
+              <td
+                class="table-btns"
+              >
+                <span
+                  class="active-member-badge"
+                >
+                  active member
+                </span>
+              </td>
+              <td
+                class="table-btns"
+              >
+                <button
+                  class="leave-mission-btn"
+                  type="button"
+                >
+                  Leave Mission
+                </button>
+              </td>
+            </tr>
           </tbody>
         </table>
       </section>
@@ -112,6 +143,37 @@ Object {
                 type="button"
               >
                 Join Mission
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td
+              class="mission-name"
+            >
+              Test Mission 2
+            </td>
+            <td
+              class="mission-description"
+            >
+              Test Description 2
+            </td>
+            <td
+              class="table-btns"
+            >
+              <span
+                class="active-member-badge"
+              >
+                active member
+              </span>
+            </td>
+            <td
+              class="table-btns"
+            >
+              <button
+                class="leave-mission-btn"
+                type="button"
+              >
+                Leave Mission
               </button>
             </td>
           </tr>

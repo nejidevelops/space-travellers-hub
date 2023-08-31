@@ -9,12 +9,21 @@ describe('Missions', () => {
   test('Missions are rendered correctly', () => {
     const store = mockStore({
       missions: {
-        missions:[{
-          name: 'Test Mission',
-          description: 'Test Description',
-          reserved: false,
-          id: 'test-id',
-        }],
+        missions:[
+          {
+            name: 'Test Mission',
+            description: 'Test Description',
+            reserved: false,
+            id: 'test-id',
+          },
+          {
+            name: 'Test Mission 2',
+            description: 'Test Description 2',
+            reserved: true,
+            id: 'test-id 2',
+          },
+
+        ],
         pending: false,
         error: false,
       },
