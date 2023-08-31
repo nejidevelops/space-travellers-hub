@@ -75,12 +75,21 @@ const rocketsSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
-    builder.addCase(fetchRockets.fulfilled, (state, { payload }) => ({
-      ...state,
-      rockets: payload,
-      pending: false,
-      error: false,
-    }));
+    builder.addCase(fetchRockets.fulfilled, (state, { payload }) => {
+      if (state.rockets.length < 1) {
+        return {
+          ...state,
+          rockets: payload,
+          pending: false,
+          error: false,
+        };
+      }
+      return {
+        ...state,
+        pending: false,
+        error: false,
+      };
+    });
     builder.addCase(fetchRockets.pending, (state) => ({
       ...state,
       pending: true,
