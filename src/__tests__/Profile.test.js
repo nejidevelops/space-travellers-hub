@@ -9,10 +9,10 @@ const mockStore = configureStore([]);
 
 describe('Profile', () => {
   let store;
-  beforeEach(()=> {
+  beforeEach(() => {
     store = mockStore({
       missions: {
-        missions:[
+        missions: [
           {
             name: 'Test Mission',
             description: 'Test Description',
@@ -24,7 +24,7 @@ describe('Profile', () => {
             description: 'Test Description 2',
             reserved: true,
             id: 'test-id 2',
-          }
+          },
         ],
         pending: false,
         error: false,
@@ -42,30 +42,30 @@ describe('Profile', () => {
             description: 'Test Description 2',
             reserved: false,
             id: 'test-id 2',
-          }
+          },
         ],
         pending: false,
         error: false,
-      }
+      },
     });
-  })
+  });
 
   test('MissionCard rendered correctly', () => {
     const myProfile = render(
       <Provider store={store}>
-        <MyProfile/>
+        <MyProfile />
       </Provider>,
     );
     expect(myProfile).toMatchSnapshot();
   });
 
-  test('Only display reserved rockets and missions', ()=> {
+  test('Only display reserved rockets and missions', () => {
     const { getByText } = render(
       <Provider store={store}>
         <MyProfile />
       </Provider>,
     );
-  
+
     expect(getByText('Test Mission 2')).toBeInTheDocument();
     expect(getByText('Test Rocket 1')).toBeInTheDocument();
   });

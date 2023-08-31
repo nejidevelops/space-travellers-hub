@@ -4,9 +4,8 @@ import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
 import Missions from '../components/Missions';
-import thunk from 'redux-thunk';
 
-const mockStore = configureStore([thunk]);
+const mockStore = configureStore([]);
 
 describe('Missions', () => {
   let store;
@@ -14,7 +13,7 @@ describe('Missions', () => {
   beforeEach(() => {
     store = mockStore({
       missions: {
-        missions:[
+        missions: [
           {
             name: 'Test Mission 1',
             description: 'Test Description',
@@ -43,7 +42,7 @@ describe('Missions', () => {
     expect(myMissions).toMatchSnapshot();
   });
 
-  test('render missions components correctlu', async() => {
+  test('render missions components correctlu', async () => {
     const { getByText } = render(
       <Provider store={store}>
         <Missions />
@@ -52,6 +51,5 @@ describe('Missions', () => {
 
     expect(getByText('Test Mission 1')).toBeInTheDocument();
     expect(getByText('Test Mission 2')).toBeInTheDocument();
-    
   });
 });

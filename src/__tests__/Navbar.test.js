@@ -10,13 +10,13 @@ describe('Navbar', () => {
   test('Navbar rendered correctly', () => {
     const store = mockStore({
       missions: {
-        missions:[
+        missions: [
           {
             name: 'Test Mission',
             description: 'Test Description',
             reserved: false,
             id: 'test-id',
-          }
+          },
         ],
         pending: false,
         error: false,
