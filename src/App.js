@@ -10,9 +10,9 @@ function App() {
     <main className="App">
       <Navbar />
       <Routes>
-        <Route element={<MyProfile />} path="/" />
+        <Route element={<Rockets />} path="/" />
+        <Route element={<MyProfile />} path="/profile" />
         <Route element={<Missions />} path="/missions" />
-        <Route element={<Rockets />} path="/rockets" />
       </Routes>
     </main>
   );

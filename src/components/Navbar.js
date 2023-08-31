@@ -17,10 +17,10 @@ const Navbar = () => {
           <NavLink to="/missions" className={(nav) => handleActive(nav)}>Missions</NavLink>
         </li>
         <li>
-          <NavLink to="/rockets" className={(nav) => handleActive(nav)}>Rockets</NavLink>
+          <NavLink to="/" className={(nav) => handleActive(nav)}>Rockets</NavLink>
         </li>
         <li className="my-profile-link">
-          <NavLink to="/" className={(nav) => handleActive(nav)}>My Profile</NavLink>
+          <NavLink to="/profile" className={(nav) => handleActive(nav)}>My Profile</NavLink>
         </li>
       </ul>
     </header>

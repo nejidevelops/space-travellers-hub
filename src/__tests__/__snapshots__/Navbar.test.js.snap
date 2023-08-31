@@ -35,8 +35,9 @@ Object {
           </li>
           <li>
             <a
-              class=""
-              href="/rockets"
+              aria-current="page"
+              class="active-link"
+              href="/"
             >
               Rockets
             </a>
@@ -45,9 +46,8 @@ Object {
             class="my-profile-link"
           >
             <a
-              aria-current="page"
-              class="active-link"
-              href="/"
+              class=""
+              href="/profile"
             >
               My Profile
             </a>
@@ -87,8 +87,9 @@ Object {
         </li>
         <li>
           <a
-            class=""
-            href="/rockets"
+            aria-current="page"
+            class="active-link"
+            href="/"
           >
             Rockets
           </a>
@@ -97,9 +98,8 @@ Object {
           class="my-profile-link"
         >
           <a
-            aria-current="page"
-            class="active-link"
-            href="/"
+            class=""
+            href="/profile"
           >
             My Profile
           </a>
