@@ -11,7 +11,7 @@ const Rockets = () => {
     if (rockets.length < 1) {
       dispatch(fetchRockets());
     }
-  }, [dispatch]);
+  }, [dispatch, rockets.length]);
 
   let content;
 
