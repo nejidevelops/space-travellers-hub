@@ -1,0 +1,56 @@
+/* stylelint-disable color-hex-length */
+.rocket {
+  display: grid;
+}
+
+.rocket-alone {
+  display: flex;
+  padding: 2rem 4rem;
+  gap: 1rem;
+}
+
+.rocket-alone img {
+  height: 200px;
+  width: 300px;
+}
+
+.rocket-alone .rocket-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.rocket-alone h2 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.rocket-alone button {
+  padding: 10px;
+}
+
+.rocket-reservation {
+  background-color: rgb(57, 159, 255);
+  color: white;
+  border: none;
+}
+
+.cancel-reservation {
+  background: transparent;
+  border: 1px solid rgb(105, 105, 105);
+  color: rgb(105, 105, 105);
+}
+
+.badge {
+  display: flex;
+  align-items: flex-start;
+}
+
+.reserved-badge {
+  background-color: #17a2b9;
+  color: #fff;
+  height: 20px;
+  padding: 0 5px;
+  margin-right: 5px;
+}
