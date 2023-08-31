@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RocketCard Component renders the component with reserved badge if reserved is true 1`] = `
+<span
+  class="reserved-badge"
+>
+  Reserved
+</span>
+`;
