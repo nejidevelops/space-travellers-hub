@@ -48,21 +48,12 @@ const missionsSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
-    builder.addCase(fetchMissions.fulfilled, (state, { payload }) => {
-      if (state.missions.length < 1) {
-        return {
-          ...state,
-          missions: payload,
-          pending: false,
-          error: false,
-        };
-      }
-      return {
-        ...state,
-        pending: false,
-        error: false,
-      };
-    });
+    builder.addCase(fetchMissions.fulfilled, (state, { payload }) => ({
+      ...state,
+      missions: payload,
+      pending: false,
+      error: false,
+    }));
     builder.addCase(fetchMissions.pending, (state) => ({
       ...state,
       pending: true,
