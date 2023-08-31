@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchRockets } from '../redux/Rockets/rockets';
 import RocketCard from './RocketCard';
+import '../styles/Rockets.css';
 
 const Rockets = () => {
   const dispatch = useDispatch();
@@ -33,7 +34,7 @@ const Rockets = () => {
     );
   }
   return (
-    <section className="rockets">
+    <section className="rocket">
       {content}
     </section>
   );
